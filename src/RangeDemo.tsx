@@ -14,11 +14,12 @@ import clickSound from "./sounds/click.mp3";
 // export default SoundDemo;
 
 export const RangeDemo = () => {
-  const [playClick] = useSound(clickSound);
   const playSound = useRecoilValue(soundState);
-  const handleChange = () => {
-    if (playSound) playClick();
-  };
+  const [playClick] = useSound(clickSound, {
+    soundEnabled: playSound,
+  });
+
+  const handleChange = () => playClick();
   return (
     <Box width={300}>
       <Slider
