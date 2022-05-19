@@ -1,13 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import SoundDemo from './SoundDemo';
+import "./App.css";
+import { PlayButton } from "./PlayButton";
+import { RangeDemo } from "./RangeDemo";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <SoundDemo></SoundDemo>
+        <RangeDemo />
+        <PlayButton/>
       </header>
     </div>
   );
